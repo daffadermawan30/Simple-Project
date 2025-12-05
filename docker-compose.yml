@@ -1,0 +1,7 @@
+services:
+  fintrack:
+    build: .
+    ports:
+      - "6080:80"
+    volumes:
+      - .:/app
