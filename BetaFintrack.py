@@ -65,25 +65,25 @@ class App:
             "A strong foundation builds lasting wealth. - Unknown"]
         
 
-        self.po_image = Image.open("Finance (3).png") 
+        self.po_image = Image.open("finance.png") 
         self.po = ctk.CTkImage(self.po_image, size=(150,120))  
         
-        self.image = Image.open("Dashboard (1).png")  
+        self.image = Image.open("dashboard.png")  
         self.photo = ctk.CTkImage(self.image, size=(595,66))  
 
-        self.logo_image = Image.open('F (4).png')
+        self.logo_image = Image.open('logo.png')
         self.logo =ctk.CTkImage(self.logo_image, size=(320,576))
 
-        self.hello_image = Image.open('81BFDA.png')
+        self.hello_image = Image.open('header.png')
         self.hello = ctk.CTkImage(self.hello_image, size=(598,170))
 
-        self.income_image =Image.open('1.png')
+        self.income_image =Image.open('income.png')
         self.income = ctk.CTkImage(self.income_image, size=(296,140))
 
-        self.expense_image =Image.open('INCOME.png')
+        self.expense_image =Image.open('expense.png')
         self.expense = ctk.CTkImage(self.expense_image, size=(296,140))
 
-        self.logout_image = Image.open('Desain tanpa judul (1).png')
+        self.logout_image = Image.open('logout.png')
         self.logout = ctk.CTkImage(self.logout_image,size=(50,50))
 
         self.font1 = ("arial", 14, 'bold')
