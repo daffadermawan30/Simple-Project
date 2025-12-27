@@ -151,24 +151,24 @@ class App:
 
         def switch_to_signup():
             self.is_signup_mode = True
-            entry_username.focus()
-            entry_username.delete(0, 'end')  # Menghapus teks di entry tanggal
+            entry_username.delete(0, 'end')  
             entry_password.delete(0, 'end')
-            print(self.is_signup_mode)
+            self.window.focus()
+            entry_password.configure(show="*")
             label_header.configure(text="SIGN UP")
             button_submit.configure(text="Sign up", font= self.font1)
             button_createaccount.configure(text="Already have an account",command=switch_to_login, width=190, height=38)
 
         def switch_to_login():
             self.is_signup_mode = False
-            entry_username.focus()
             entry_username.delete(0, 'end')  
             entry_password.delete(0, 'end')
-            print(self.is_signup_mode)
+            self.window.focus()
+            entry_password.configure(show="*")
             label_header.configure(text="LOGIN")
             button_submit.configure(text="Login", font=self.font1)
             button_createaccount.configure(text="Register account",command=switch_to_signup, width=190, height=38)
-        
+
         def focus_password(event):
             entry_password.focus()
 
@@ -232,7 +232,7 @@ class App:
                 cursor.execute(query, (self.current_user_id, date))
                 results = cursor.fetchall()
 
-                print(f"Results: {results}")  
+                # print(f"Results: {results}")  # DINONAKTIFKAN
 
                 for item in self.tree.get_children():
                     self.tree.delete(item)
@@ -244,7 +244,7 @@ class App:
                     messagebox.showinfo("Info", "Tidak ada hasil yang ditemukan.")
 
             except Exception as e:
-                print(f"Error executing query: {e}")
+                # print(f"Error executing query: {e}") # DINONAKTIFKAN
                 messagebox.showerror("Error", "Terjadi kesalahan saat menjalankan pencarian.")
 
             finally:
