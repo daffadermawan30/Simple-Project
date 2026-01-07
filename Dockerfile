@@ -10,7 +10,6 @@ RUN apt-get update && \
 WORKDIR /app
 COPY . /app/
 
-COPY startup.sh /startup.sh
-RUN chmod +x /startup.sh
+COPY fintrack.conf /etc/supervisor/conf.d/
 
-CMD ["/startup.sh"]
+RUN chmod -R 777 /app
